@@ -1,0 +1,54 @@
+\documentclass[twocolumn]{article} % This is for a 2 column setup
+\usepackage[super,sort&compress]{natbib}
+\setcitestyle{comma,numbers,super,open={},close={}} 
+\makeatletter
+\renewcommand\@biblabel[1]{#1.}
+\makeatother
+
+\title{A file containing the pointers for using latex to write a thesis(Replace this with the title of your thesis.)}
+\author{Name of the author}
+
+\begin{document}
+
+\begin{titlepage}
+    \begin{center}
+        \vspace*{1cm}
+ 
+        \textbf{Replace this with the main title}
+ 
+        \vspace{0.5cm}
+         Write your sub-title here. 
+             
+        \vspace{1.5cm}
+ 
+        \textbf{Write the name of the author}
+ 
+        \vfill
+             
+        \vspace{0.8cm}
+      
+        % \includegraphics[width=0.4\textwidth]{university}
+             
+        Department\\
+        University\\
+        Date
+             
+    \end{center}
+ \end{titlepage}
+
+Use this space to input whichever sections or subsections you have written in the other smaller tex files. Once you are done writing and formatting them, using input command, include them in the main file. 
+
+\input{subsections/Abstract.tex}
+
+\input{subsections/Introduction.tex}
+
+\input{subsections/LitReview.tex}
+
+\input{subsections/Methodology.tex}
+\pagebreak
+\bibliographystyle{unsrtnat}
+\bibliography{Bibliography}  % Replace with your actual BibTeX file name (without the file extension)
+
+% Your bibliography will be generated automatically if you have used any citations
+
+\end{document}
